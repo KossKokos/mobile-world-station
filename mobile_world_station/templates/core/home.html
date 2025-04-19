@@ -1,0 +1,158 @@
+{% extends 'core/base.html' %} {% load static %} {% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}" />
+{% endblock %} 
+
+{% block title %} Home | MobileWorldStation {% endblock %} 
+{% block content %}
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container">
+    <h1>Discover the Latest Mobile Technology</h1>
+    <p>
+      Find the perfect phone, accessories, and services at unbeatable prices. We
+      offer the best brands with expert advice to match your needs.
+    </p>
+    <a href="{% url 'core:products' %}" class="btn">Shop Now</a>
+  </div>
+</section>
+
+<!-- Featured Products Section -->
+<section class="featured">
+  <div class="container">
+    <h2 class="section-title">Featured Products</h2>
+    <div class="products-grid">
+      <!-- Product 1 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img
+            src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+            alt="Smartphone Model X"
+          />
+        </div>
+        <div class="product-info">
+          <h3>Smartphone Model X</h3>
+          <p>The latest flagship with cutting-edge technology.</p>
+          <div class="price">$899.99</div>
+          <a href="#" class="btn">View Details</a>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img
+            src="https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+            alt="Budget Phone Y"
+          />
+        </div>
+        <div class="product-info">
+          <h3>Budget Phone Y</h3>
+          <p>Great performance at an affordable price.</p>
+          <div class="price">$299.99</div>
+          <a href="#" class="btn">View Details</a>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img
+            src="https://images.unsplash.com/photo-1580910051074-3eb694886505?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+            alt="Premium Phone Z"
+          />
+        </div>
+        <div class="product-info">
+          <h3>Premium Phone Z</h3>
+          <p>Luxury design with top-tier specifications.</p>
+          <div class="price">$1,199.99</div>
+          <a href="#" class="btn">View Details</a>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img
+            src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+            alt="Mid-Range Phone A"
+          />
+        </div>
+        <div class="product-info">
+          <h3>Mid-Range Phone A</h3>
+          <p>Perfect balance between price and performance.</p>
+          <div class="price">$549.99</div>
+          <a href="#" class="btn">View Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section class="services">
+  <div class="container">
+    <h2 class="section-title">Our Services</h2>
+    <div class="services-grid">
+      <!-- Service 1 -->
+      <div class="service-card">
+        <i class="fas fa-mobile-alt"></i>
+        <h3>Device Repair</h3>
+        <p>
+          Fast and reliable repair services for all your mobile devices with a
+          90-day warranty.
+        </p>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="service-card">
+        <i class="fas fa-sim-card"></i>
+        <h3>SIM & Plans</h3>
+        <p>
+          We offer the best mobile plans from all major carriers to suit your
+          needs.
+        </p>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="service-card">
+        <i class="fas fa-headphones"></i>
+        <h3>Accessories</h3>
+        <p>
+          High-quality cases, screen protectors, chargers, and more to protect
+          your device.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Newsletter Section -->
+<section class="newsletter">
+  <div class="container">
+    <h2>Subscribe to Our Newsletter</h2>
+    <p>
+      Stay updated with the latest products, deals, and tech news from
+      MobileWorldStation.
+    </p>
+    <form class="newsletter-form">
+      <input type="email" placeholder="Enter your email address" required />
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+{% block extra_js %}
+<script>
+  // Hide mobile menu if screen is resized to desktop size
+  window.addEventListener("resize", function () {
+    if (window.innerWidth > 768) {
+      document.getElementById("mainNav").style.display = "block";
+      document.getElementById("mobileMenuBtn").style.display = "none";
+    } else {
+      document.getElementById("mainNav").style.display = "none";
+      document.getElementById("mobileMenuBtn").style.display = "block";
+    }
+  });
+</script>
+{% endblock %} {% endblock %}

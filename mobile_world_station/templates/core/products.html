@@ -1,0 +1,192 @@
+{% extends 'core/base.html' %} {% load static %} {% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/products.css' %}" />
+{% endblock %} {% block title %} Our Products | MobileWorldStation {% endblock%}
+{%block content %}
+
+<!-- Page Header -->
+<section class="page-header">
+  <div class="container">
+    <h1>Our Products</h1>
+    <div class="breadcrumb">
+      <a href="{% url 'core:home' %}">Home</a>
+      <span>/</span>
+      <a href="{% url 'core:products' %}">Products</a>
+    </div>
+  </div>
+</section>
+
+<!-- Products Filter -->
+<section class="products-filter">
+  <div class="container">
+    <h2 class="section-title">Filter Products</h2>
+    <div class="filter-group">
+      <h3>Brand</h3>
+      <div class="filter-options">
+        <button class="filter-btn active">All</button>
+        <button class="filter-btn">Apple</button>
+        <button class="filter-btn">Samsung</button>
+        <button class="filter-btn">Google</button>
+        <button class="filter-btn">OnePlus</button>
+        <button class="filter-btn">Xiaomi</button>
+      </div>
+    </div>
+    <div class="filter-group">
+      <h3>Price Range</h3>
+      <div class="filter-options">
+        <button class="filter-btn active">All</button>
+        <button class="filter-btn">Under $300</button>
+        <button class="filter-btn">$300 - $600</button>
+        <button class="filter-btn">$600 - $900</button>
+        <button class="filter-btn">Over $900</button>
+      </div>
+    </div>
+    <div class="filter-group">
+      <h3>Features</h3>
+      <div class="filter-options">
+        <button class="filter-btn active">All</button>
+        <button class="filter-btn">5G</button>
+        <button class="filter-btn">Waterproof</button>
+        <button class="filter-btn">Wireless Charging</button>
+        <button class="filter-btn">Dual SIM</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Products Grid -->
+<section class="products">
+  <div class="container">
+    <!-- <h2 class="section-title">Latest Smartphones</h2> -->
+    <h1>Our Products ({{ products_count }} available)</h1>
+
+    <div class="products-grid">
+      {% for product in products %}
+      <!-- Product 1 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="{{product.item_image}}" alt="{{ product.item_name }}" />
+        </div>
+        <div class="product-info">
+          <h3>{{ product.item_name }}</h3>
+          <p>{{ product.item_description }}</p>
+          <p>In stock: {{ product.item_quantity }}</p>
+          <div class="price">£{{ product.item_price }}</div>
+          <a href="{% url 'core:product_detail' product.id %}" class="btn"
+            >View Details</a
+          >
+        </div>
+      </div>
+
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Comparison Table Section -->
+<section class="comparison-section">
+  <div class="container">
+    <h2 class="section-title">Product Comparison</h2>
+    <p>
+      Compare our top-selling smartphones to find the perfect one for your
+      needs.
+    </p>
+
+    <table class="comparison-table">
+      <thead>
+        <tr>
+          <th>Model</th>
+          <th>iPhone 14 Pro</th>
+          <th>Samsung S23</th>
+          <th>Google Pixel 7 Pro</th>
+          <th>OnePlus 11</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Price</td>
+          <td class="highlight">$999.99</td>
+          <td>$799.99</td>
+          <td>$899.99</td>
+          <td>$699.99</td>
+        </tr>
+        <tr>
+          <td>Display</td>
+          <td>6.1" OLED</td>
+          <td>6.1" AMOLED</td>
+          <td>6.7" LTPO OLED</td>
+          <td>6.7" AMOLED</td>
+        </tr>
+        <tr>
+          <td>Processor</td>
+          <td>A16 Bionic</td>
+          <td>Snapdragon 8 Gen 2</td>
+          <td>Google Tensor G2</td>
+          <td>Snapdragon 8 Gen 2</td>
+        </tr>
+        <tr>
+          <td>Camera</td>
+          <td>48MP Main</td>
+          <td>50MP Main</td>
+          <td>50MP Main</td>
+          <td>50MP Main</td>
+        </tr>
+        <tr>
+          <td>Battery</td>
+          <td>3200mAh</td>
+          <td>3900mAh</td>
+          <td>5000mAh</td>
+          <td>5000mAh</td>
+        </tr>
+        <tr>
+          <td>Storage</td>
+          <td>128GB-1TB</td>
+          <td>128GB-1TB</td>
+          <td>128GB-512GB</td>
+          <td>128GB-512GB</td>
+        </tr>
+        <tr>
+          <td>Water Resistance</td>
+          <td>IP68</td>
+          <td>IP68</td>
+          <td>IP68</td>
+          <td>IP64</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+{% block extra_js %}
+<!-- JavaScript -->
+<script>
+  // Filter functionality
+  document.querySelectorAll(".filter-btn").forEach((btn) => {
+    btn.addEventListener("click", function () {
+      // Remove active class from all buttons in this group
+      this.parentElement.querySelectorAll(".filter-btn").forEach((b) => {
+        b.classList.remove("active");
+      });
+
+      // Add active class to clicked button
+      this.classList.add("active");
+
+      // Here you would typically filter the products
+      // For now we'll just log the filter selection
+      console.log("Filter selected:", this.textContent);
+    });
+  });
+
+  // Highlight table row on hover
+  document.querySelectorAll(".comparison-table tr").forEach((row) => {
+    row.addEventListener("mouseenter", function () {
+      this.style.backgroundColor = "#f5f5f5";
+    });
+
+    row.addEventListener("mouseleave", function () {
+      if (!this.classList.contains("highlight")) {
+        this.style.backgroundColor = "";
+      }
+    });
+  });
+</script>
+{% endblock %} {% endblock %}

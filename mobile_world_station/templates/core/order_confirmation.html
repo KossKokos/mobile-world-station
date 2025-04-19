@@ -1,0 +1,86 @@
+{% extends 'core/base.html' %} {% block content %}
+<div class="confirmation-container">
+  <h1>Order Confirmation</h1>
+  <div class="confirmation-card">
+    <div class="confirmation-header">
+      <h2>Thank you for your order!</h2>
+      <p>Order #{{ order.id }}</p>
+    </div>
+
+    <div class="confirmation-details">
+      <div>
+        <h3>Order Summary</h3>
+        {% for item in order.items.all %}
+        <div class="order-item">
+          <span>{{ item.quantity }} × {{ item.product.item_name }}</span>
+          <span>${{ item.price }}</span>
+        </div>
+        {% endfor %}
+      </div>
+
+      <div class="order-total">
+        <span>Total:</span>
+        <span>${{ order.total_price }}</span>
+      </div>
+    </div>
+
+    <div class="shipping-info">
+      <h3>Shipping Address</h3>
+      <p>{{ order.shipping_address }}</p>
+    </div>
+
+    <a href="{% url 'products' %}" class="continue-shopping"
+      >Continue Shopping</a
+    >
+  </div>
+</div>
+
+<style>
+  .confirmation-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .confirmation-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 30px;
+    background: #f9f9f9;
+  }
+
+  .confirmation-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .confirmation-header h2 {
+    color: #28a745;
+  }
+
+  .order-item {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+  }
+
+  .order-total {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+    font-weight: bold;
+  }
+
+  .continue-shopping {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+</style>
+{% endblock %}

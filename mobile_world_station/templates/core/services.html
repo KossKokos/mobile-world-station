@@ -1,0 +1,213 @@
+{% extends 'core/base.html' %} {% load static %} {% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/services.css' %}" />
+{% endblock %} {% block title %} Our Services | MobileWorldStation {% endblock
+%} {% endblock %} {% block content %}
+<!-- Page Header -->
+<section class="page-header">
+  <div class="container">
+    <h1>Professional Mobile Services</h1>
+    <div class="breadcrumb">
+      <a href="{% url 'core:home' %}">Home</a>
+      <span>/</span>
+      <a href="{% url 'core:services' %}">Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- Services Grid -->
+<section class="services-section">
+  <div class="container">
+    <h2 class="section-title">Our Expert Services</h2>
+    <p class="section-subtitle">Quality repairs with warranty protection</p>
+
+    <div class="services-grid">
+      <!-- Service 1 -->
+      <div class="service-card">
+        <div class="service-img">
+          <img
+            src="{% static 'images/services/screen-repair.jpg' %}"
+            alt="Screen Repair"
+          />
+        </div>
+        <div class="service-info">
+          <h3>Screen Replacement</h3>
+          <p>Cracked or damaged display? We'll have it looking new again.</p>
+          <ul class="service-features">
+            <li>30-60 minute service</li>
+            <li>OEM or premium aftermarket parts</li>
+            <li>90-day warranty</li>
+          </ul>
+          <div class="service-price">From $79.99</div>
+          <a href="#appointment" class="btn">Book Now</a>
+        </div>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="service-card">
+        <div class="service-img">
+          <img
+            src="{% static 'images/services/battery-replacement.jpg' %}"
+            alt="Battery Replacement"
+          />
+        </div>
+        <div class="service-info">
+          <h3>Battery Service</h3>
+          <p>Restore your device's battery life to like-new condition.</p>
+          <ul class="service-features">
+            <li>High-capacity batteries</li>
+            <li>60-day performance guarantee</li>
+            <li>Water resistance maintained</li>
+          </ul>
+          <div class="service-price">From $49.99</div>
+          <a href="#appointment" class="btn">Book Now</a>
+        </div>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="service-card">
+        <div class="service-img">
+          <img
+            src="{% static 'images/services/water-damage.jpg' %}"
+            alt="Water Damage Repair"
+          />
+        </div>
+        <div class="service-info">
+          <h3>Water Damage Rescue</h3>
+          <p>Emergency treatment for liquid-damaged devices.</p>
+          <ul class="service-features">
+            <li>Free diagnostic</li>
+            <li>Ultrasonic cleaning</li>
+            <li>Corrosion treatment</li>
+          </ul>
+          <div class="service-price">From $69.99</div>
+          <a href="#appointment" class="btn">Book Now</a>
+        </div>
+      </div>
+
+      <!-- Service 4 -->
+      <div class="service-card">
+        <div class="service-img">
+          <img
+            src="{% static 'images/services/software-repair.jpg' %}"
+            alt="Software Repair"
+          />
+        </div>
+        <div class="service-info">
+          <h3>Software Solutions</h3>
+          <p>Fix crashes, viruses, and performance issues.</p>
+          <ul class="service-features">
+            <li>Virus removal</li>
+            <li>Data recovery</li>
+            <li>OS optimization</li>
+          </ul>
+          <div class="service-price">From $39.99</div>
+          <a href="#appointment" class="btn">Book Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Repair Brands Section -->
+<section class="repair-brands">
+  <div class="container">
+    <h2 class="section-title">We Service All Brands</h2>
+    <p class="section-subtitle">
+      Certified repairs for all major manufacturers
+    </p>
+
+    <div class="brands-grid">
+      <div class="brand-card">
+        <img src="{% static 'images/brands/apple.svg' %}" alt="Apple" />
+      </div>
+      <div class="brand-card">
+        <img src="{% static 'images/brands/samsung.svg' %}" alt="Samsung" />
+      </div>
+      <div class="brand-card">
+        <img src="{% static 'images/brands/google.svg' %}" alt="Google" />
+      </div>
+      <div class="brand-card">
+        <img src="{% static 'images/brands/oneplus.svg' %}" alt="OnePlus" />
+      </div>
+      <div class="brand-card">
+        <img src="{% static 'images/brands/xiaomi.svg' %}" alt="Xiaomi" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Appointment Section -->
+<section class="appointment" id="appointment">
+  <div class="container">
+    <div class="appointment-container">
+      <div class="appointment-info">
+        <h2>Schedule Your Repair</h2>
+        <p>
+          Book an appointment with our certified technicians. Most repairs
+          completed while you wait.
+        </p>
+        <ul class="service-features">
+          <li>Free diagnostic assessment</li>
+          <li>Same-day service available</li>
+          <li>Warranty on all repairs</li>
+          <li>No fix - no fee policy</li>
+        </ul>
+        <div class="contact-info">
+          <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+          <p><i class="fas fa-envelope"></i> repairs@mobileworldstation.com</p>
+        </div>
+      </div>
+
+      <form class="appointment-form" method="post">
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="name">Full Name*</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email*</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number*</label>
+          <input type="tel" id="phone" name="phone" required />
+        </div>
+
+        <div class="form-group">
+          <label for="service">Service Needed*</label>
+          <select id="service" name="service" required>
+            <option value="">Select a service</option>
+            <option value="screen">Screen Replacement</option>
+            <option value="battery">Battery Replacement</option>
+            <option value="water">Water Damage Repair</option>
+            <option value="software">Software Repair</option>
+            <option value="other">Other Repair</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="date">Preferred Date*</label>
+          <input type="date" id="date" name="date" required />
+        </div>
+
+        <div class="form-group">
+          <label for="message">Device Details (Model, Issue)</label>
+          <textarea id="message" name="message"></textarea>
+        </div>
+
+        <button type="submit" class="btn">Book Appointment</button>
+      </form>
+    </div>
+  </div>
+</section>
+{% endblock %} {% block extra_js %}
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Set minimum appointment date to today
+    const today = new Date().toISOString().split("T")[0];
+    document.getElementById("date").min = today;
+  });
+</script>
+{% endblock %}

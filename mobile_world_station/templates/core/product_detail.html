@@ -1,0 +1,85 @@
+{% extends 'core/base.html' %}
+<!-- If you have a base template -->
+{% load static %} {% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/product_details.css' %}" />
+{% endblock %} {% block content %}
+<div class="product-detail-container">
+  <h1>{{ product.item_name }}</h1>
+
+  <div class="product-image-container">
+    <img
+      src="{{ product.item_image }}"
+      alt="{{ product.item_name }}"
+      class="product-detail-image"
+    />
+  </div>
+
+  <div class="product-info">
+    <h2>Product Details</h2>
+    <table class="product-details-table">
+      {% for field in fields %}
+      <tr>
+        <th>{{ field.0 }}</th>
+        <td>{{ field.1 }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+
+    <div class="product-actions">
+      {% if request.user.is_authenticated %}
+      <button
+        id="add-to-cart-btn"
+        class="add-to-cart-btn {% if in_cart %}in-cart{% endif %}"
+        data-product-id="{{ product.id }}"
+      >
+        {% if in_cart %}✓ In Cart{% else %}Add to Cart{% endif %}
+      </button>
+      {% else %}
+
+      <a
+        href="{% url 'login' %}?next={% url 'core:product_detail' product.id %}"
+        class="login-to-cart"
+      >
+        Login to Add to Cart
+      </a>
+      {% endif %}
+    </div>
+
+    <div class="actions">
+      <a href="{% url 'core:products' %}" class="back-button"
+        >← Back to Products</a
+      >
+    </div>
+  </div>
+</div>
+{% block extra_js %}
+<script>
+  document
+    .getElementById("add-to-cart-btn")
+    ?.addEventListener("click", function () {
+      const productId = this.dataset.productId;
+      const btn = this;
+      const cartLink = document.querySelector(".cart-count");
+
+      fetch(`/products/${productId}/add-to-cart/`, {
+        method: "POST",
+        headers: {
+          "X-CSRFToken": "{{ csrf_token }}",
+          "Content-Type": "application/json",
+        },
+        credentials: "same-origin",
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.success) {
+            btn.textContent = "✓ In Cart";
+            btn.classList.add("in-cart");
+            cartLink.textContent = `(${data.cartQuantity})`;
+          }
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
+    });
+</script>
+{% endblock %} {% endblock %}

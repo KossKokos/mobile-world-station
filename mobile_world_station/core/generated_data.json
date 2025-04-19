@@ -1,0 +1,362 @@
+[
+    {
+      "item_name": "iPhone 15 Pro",
+      "item_price": 999.99,
+      "item_description": "Latest Apple smartphone with A17 Pro chip and titanium design",
+      "item_image": "https://images.unsplash.com/photo-1695048132592-1e0fd04df7a1?ixlib=rb-4.0.3&w=400&h=300&fit=crop",
+      "item_brand": "apple",
+      "item_type": "phone",
+      "item_quantity": 25
+    },
+    {
+      "item_name": "MacBook Air M2",
+      "item_price": 1099.00,
+      "item_description": "Ultra-thin laptop with Apple M2 chip and Retina display",
+      "item_image": "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?ixlib=rb-4.0.3&w=400&h=300&fit=crop",
+      "item_brand": "apple",
+      "item_type": "laptop",
+      "item_quantity": 18
+    },
+    {
+      "item_name": "Galaxy S23 Ultra",
+      "item_price": 1199.99,
+      "item_description": "Samsung flagship with 200MP camera and S Pen support",
+      "item_image": "https://images.unsplash.com/photo-1675886110673-1a2e3f1c534e?ixlib=rb-4.0.3&w=400&h=300&fit=crop",
+      "item_brand": "samsung",
+      "item_type": "phone",
+      "item_quantity": 32
+    },
+    {
+      "item_name": "Dell XPS 15",
+      "item_price": 1499.00,
+      "item_description": "Professional laptop with 4K OLED touch display",
+      "item_image": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-4.0.3&w=400&h=300&fit=crop",
+      "item_brand": "dell",
+      "item_type": "laptop",
+      "item_quantity": 12
+    },
+    {
+      "item_name": "iPad Pro 12.9",
+      "item_price": 1099.00,
+      "item_description": "Apple tablet with M2 chip and Liquid Retina XDR display",
+      "item_image": "https://images.unsplash.com/photo-1607936854279-55e8a4c64888?ixlib=rb-4.0.3&w=400&h=300&fit=crop",
+      "item_brand": "apple",
+      "item_type": "tablet",
+      "item_quantity": 15
+    },
+    {
+      "item_name": "Apple Watch Ultra",
+      "item_price": 799.00,
+      "item_description": "Rugged smartwatch with precision GPS and 36-hour battery",
+      "item_image": "https://images.unsplash.com/photo-1664478546384-d60ffe63d30a?ixlib=rb-4.0.3&w=400&h=300&fit=crop",
+      "item_brand": "apple",
+      "item_type": "watch",
+      "item_quantity": 20
+    },
+    {
+      "item_name": "Galaxy Watch 6",
+      "item_price": 299.99,
+      "item_description": "Samsung smartwatch with Wear OS and body composition analysis",
+      "item_image": "https://images.unsplash.com/photo-1697460540470-6d3c8b8a1f1a?ixlib=rb-4.0.3&w=400&h=300&fit=crop",
+      "item_brand": "samsung",
+      "item_type": "watch",
+      "item_quantity": 28
+    },
+    {
+      "item_name": "AirPods Pro 2",
+      "item_price": 249.00,
+      "item_description": "Active noise cancelling wireless earbuds with Spatial Audio",
+      "item_image": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-4.0.3&w=400&h=300&fit=crop",
+      "item_brand": "apple",
+      "item_type": "headphones",
+      "item_quantity": 40
+    },
+    {
+      "item_name": "Galaxy Buds 2 Pro",
+      "item_price": 229.99,
+      "item_description": "Samsung wireless earbuds with 24-bit Hi-Fi sound",
+      "item_image": "https://images.unsplash.com/photo-1618366719320-3894a6e5cf0b?ixlib=rb-4.0.3&w=400&h=300&fit=crop",
+      "item_brand": "samsung",
+      "item_type": "headphones",
+      "item_quantity": 35
+    },
+    {
+      "item_name": "HP Spectre x360",
+      "item_price": 1299.00,
+      "item_description": "Convertible laptop with 13.5\" 3K2K OLED display",
+      "item_image": "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?ixlib=rb-4.0.3&w=400&h=300&fit=crop",
+      "item_brand": "hp",
+      "item_type": "laptop",
+      "item_quantity": 10
+    },
+    {
+      "item_name": "Lenovo ThinkPad X1",
+      "item_price": 1599.00,
+      "item_description": "Business laptop with military-grade durability",
+      "item_image": "https://images.unsplash.com/photo-1593642634402-b0eb5e2eebc9?ixlib=rb-4.0.3&w=400&h=300&fit=crop",
+      "item_brand": "lenovo",
+      "item_type": "laptop",
+      "item_quantity": 8
+    },
+    {
+      "item_name": "Redmi Note 12",
+      "item_price": 199.99,
+      "item_description": "Xiaomi budget phone with 120Hz AMOLED display",
+      "item_image": "https://images.unsplash.com/photo-1675351305625-d56958b6f89b?ixlib=rb-4.0.3&w=400&h=300&fit=crop",
+      "item_brand": "xiomi",
+      "item_type": "phone",
+      "item_quantity": 50
+    },
+    {
+      "item_name": "Surface Pro 9",
+      "item_price": 999.00,
+      "item_description": "Microsoft 2-in-1 tablet with Intel Core i5",
+      "item_image": "https://images.unsplash.com/photo-1664478546384-d60ffe63d30a?ixlib=rb-4.0.3&w=400&h=300&fit=crop",
+      "item_brand": "microsoft",
+      "item_type": "tablet",
+      "item_quantity": 14
+    },
+    {
+      "item_name": "iMac 24\" M1",
+      "item_price": 1299.00,
+      "item_description": "All-in-one desktop with 4.5K Retina display",
+      "item_image": "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?ixlib=rb-4.0.3&w=400&h=300&fit=crop",
+      "item_brand": "apple",
+      "item_type": "personal_computer",
+      "item_quantity": 7
+    },
+    {
+      "item_name": "Dell OptiPlex",
+      "item_price": 899.00,
+      "item_description": "Compact business desktop with Intel Core i7",
+      "item_image": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-4.0.3&w=400&h=300&fit=crop",
+      "item_brand": "dell",
+      "item_type": "personal_computer",
+      "item_quantity": 12
+    },
+    {
+      "item_name": "Magic Keyboard",
+      "item_price": 99.00,
+      "item_description": "Apple keyboard with numeric keypad and Touch ID",
+      "item_image": "https://images.unsplash.com/photo-1630002744431-5b71c5df3b3a?ixlib=rb-4.0.3&w=400&h=300&fit=crop",
+      "item_brand": "apple",
+      "item_type": "accessory",
+      "item_quantity": 45
+    },
+    {
+      "item_name": "Samsung T7 SSD",
+      "item_price": 89.99,
+      "item_description": "Portable SSD with 1TB storage and USB 3.2",
+      "item_image": "https://images.unsplash.com/photo-1591488320449-011701bb6704?ixlib=rb-4.0.3&w=400&h=300&fit=crop",
+      "item_brand": "samsung",
+      "item_type": "accessory",
+      "item_quantity": 30
+    },
+    {
+      "item_name": "Xiaomi Pad 6",
+      "item_price": 349.99,
+      "item_description": "Android tablet with 144Hz display and Snapdragon 870",
+      "item_image": "https://images.unsplash.com/photo-1607936854279-55e8a4c64888?ixlib=rb-4.0.3&w=400&h=300&fit=crop",
+      "item_brand": "xiomi",
+      "item_type": "tablet",
+      "item_quantity": 18
+    },
+    {
+      "item_name": "Surface Laptop 5",
+      "item_price": 1299.00,
+      "item_description": "Microsoft laptop with PixelSense touchscreen",
+      "item_image": "https://images.unsplash.com/photo-1664478546384-d60ffe63d30a?ixlib=rb-4.0.3&w=400&h=300&fit=crop",
+      "item_brand": "microsoft",
+      "item_type": "laptop",
+      "item_quantity": 9
+    },
+    {
+      "item_name": "HP Envy Desktop",
+      "item_price": 899.00,
+      "item_description": "Slim desktop PC with 12th Gen Intel Core",
+      "item_image": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-4.0.3&w=400&h=300&fit=crop",
+      "item_brand": "hp",
+      "item_type": "personal_computer",
+      "item_quantity": 11
+    },
+    {
+      "item_name": "Lenovo Yoga Tab",
+      "item_price": 399.00,
+      "item_description": "Android tablet with built-in stand and Dolby Atmos",
+      "item_image": "https://images.unsplash.com/photo-1607936854279-55e8a4c64888?ixlib=rb-4.0.3&w=400&h=300&fit=crop",
+      "item_brand": "lenovo",
+      "item_type": "tablet",
+      "item_quantity": 15
+    },
+    {
+      "item_name": "Galaxy Tab S9",
+      "item_price": 799.99,
+      "item_description": "Samsung Android tablet with S Pen and AMOLED screen",
+      "item_image": "https://images.unsplash.com/photo-1607936854279-55e8a4c64888?ixlib=rb-4.0.3&w=400&h=300&fit=crop",
+      "item_brand": "samsung",
+      "item_type": "tablet",
+      "item_quantity": 13
+    },
+    {
+      "item_name": "Mac Mini M2",
+      "item_price": 599.00,
+      "item_description": "Compact Apple desktop with M2 chip",
+      "item_image": "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?ixlib=rb-4.0.3&w=400&h=300&fit=crop",
+      "item_brand": "apple",
+      "item_type": "personal_computer",
+      "item_quantity": 10
+    },
+    {
+      "item_name": "Dell UltraSharp Monitor",
+      "item_price": 499.00,
+      "item_description": "27\" 4K monitor with USB-C connectivity",
+      "item_image": "https://images.unsplash.com/photo-1546054454-aa26e2b734c7?ixlib=rb-4.0.3&w=400&h=300&fit=crop",
+      "item_brand": "dell",
+      "item_type": "accessory",
+      "item_quantity": 20
+    },
+    {
+      "item_name": "Magic Mouse",
+      "item_price": 79.00,
+      "item_description": "Apple wireless mouse with Multi-Touch surface",
+      "item_image": "https://images.unsplash.com/photo-1630002744431-5b71c5df3b3a?ixlib=rb-4.0.3&w=400&h=300&fit=crop",
+      "item_brand": "apple",
+      "item_type": "accessory",
+      "item_quantity": 35
+    },
+    {
+      "item_name": "Galaxy Book3 Pro",
+      "item_price": 1399.99,
+      "item_description": "Samsung lightweight laptop with AMOLED display",
+      "item_image": "https://images.unsplash.com/photo-1593642634402-b0eb5e2eebc9?ixlib=rb-4.0.3&w=400&h=300&fit=crop",
+      "item_brand": "samsung",
+      "item_type": "laptop",
+      "item_quantity": 8
+    },
+    {
+      "item_name": "Redmi Book Pro",
+      "item_price": 799.99,
+      "item_description": "Xiaomi laptop with 3.2K resolution display",
+      "item_image": "https://images.unsplash.com/photo-1593642634402-b0eb5e2eebc9?ixlib=rb-4.0.3&w=400&h=300&fit=crop",
+      "item_brand": "xiomi",
+      "item_type": "laptop",
+      "item_quantity": 12
+    },
+    {
+      "item_name": "Surface Headphones 2",
+      "item_price": 249.00,
+      "item_description": "Microsoft noise-cancelling over-ear headphones",
+      "item_image": "https://images.unsplash.com/photo-1618366719320-3894a6e5cf0b?ixlib=rb-4.0.3&w=400&h=300&fit=crop",
+      "item_brand": "microsoft",
+      "item_type": "headphones",
+      "item_quantity": 15
+    },
+    {
+      "item_name": "HP Omen Desktop",
+      "item_price": 1499.00,
+      "item_description": "Gaming PC with NVIDIA RTX 3070 graphics",
+      "item_image": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-4.0.3&w=400&h=300&fit=crop",
+      "item_brand": "hp",
+      "item_type": "personal_computer",
+      "item_quantity": 6
+    },
+    {
+      "item_name": "Lenovo Legion Tower",
+      "item_price": 1299.00,
+      "item_description": "Gaming desktop with liquid cooling system",
+      "item_image": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-4.0.3&w=400&h=300&fit=crop",
+      "item_brand": "lenovo",
+      "item_type": "personal_computer",
+      "item_quantity": 7
+    },
+    {
+      "item_name": "Galaxy Z Flip5",
+      "item_price": 999.99,
+      "item_description": "Samsung foldable smartphone with Flex Window",
+      "item_image": "https://images.unsplash.com/photo-1695048132592-1e0fd04df7a1?ixlib=rb-4.0.3&w=400&h=300&fit=crop",
+      "item_brand": "samsung",
+      "item_type": "phone",
+      "item_quantity": 14
+    },
+    {
+      "item_name": "iPhone SE",
+      "item_price": 429.00,
+      "item_description": "Compact Apple phone with A15 Bionic chip",
+      "item_image": "https://images.unsplash.com/photo-1695048132592-1e0fd04df7a1?ixlib=rb-4.0.3&w=400&h=300&fit=crop",
+      "item_brand": "apple",
+      "item_type": "phone",
+      "item_quantity": 22
+    },
+    {
+      "item_name": "Dell Latitude 14",
+      "item_price": 1099.00,
+      "item_description": "Business laptop with vPro technology",
+      "item_image": "https://images.unsplash.com/photo-1593642634402-b0eb5e2eebc9?ixlib=rb-4.0.3&w=400&h=300&fit=crop",
+      "item_brand": "dell",
+      "item_type": "laptop",
+      "item_quantity": 9
+    },
+    {
+      "item_name": "HP Elite Dragonfly",
+      "item_price": 1699.00,
+      "item_description": "Ultra-light business convertible laptop",
+      "item_image": "https://images.unsplash.com/photo-1593642634402-b0eb5e2eebc9?ixlib=rb-4.0.3&w=400&h=300&fit=crop",
+      "item_brand": "hp",
+      "item_type": "laptop",
+      "item_quantity": 5
+    },
+    {
+      "item_name": "ThinkPad TrackPoint Keyboard",
+      "item_price": 99.00,
+      "item_description": "Bluetooth keyboard with legendary TrackPoint",
+      "item_image": "https://images.unsplash.com/photo-1630002744431-5b71c5df3b3a?ixlib=rb-4.0.3&w=400&h=300&fit=crop",
+      "item_brand": "lenovo",
+      "item_type": "accessory",
+      "item_quantity": 25
+    },
+    {
+      "item_name": "Xiaomi Smart Band 7",
+      "item_price": 59.99,
+      "item_description": "Fitness tracker with AMOLED display",
+      "item_image": "https://images.unsplash.com/photo-1664478546384-d60ffe63d30a?ixlib=rb-4.0.3&w=400&h=300&fit=crop",
+      "item_brand": "xiomi",
+      "item_type": "watch",
+      "item_quantity": 40
+    },
+    {
+      "item_name": "Surface Pro Keyboard",
+      "item_price": 129.00,
+      "item_description": "Signature keyboard for Surface Pro",
+      "item_image": "https://images.unsplash.com/photo-1630002744431-5b71c5df3b3a?ixlib=rb-4.0.3&w=400&h=300&fit=crop",
+      "item_brand": "microsoft",
+      "item_type": "accessory",
+      "item_quantity": 18
+    },
+    {
+      "item_name": "Galaxy SmartTag",
+      "item_price": 29.99,
+      "item_description": "Bluetooth tracker for finding lost items",
+      "item_image": "https://images.unsplash.com/photo-1591488320449-011701bb6704?ixlib=rb-4.0.3&w=400&h=300&fit=crop",
+      "item_brand": "samsung",
+      "item_type": "accessory",
+      "item_quantity": 50
+    },
+    {
+      "item_name": "AirTag",
+      "item_price": 29.00,
+      "item_description": "Apple's precision finding accessory",
+      "item_image": "https://images.unsplash.com/photo-1619546813926-a78fa6372cd2?ixlib=rb-4.0.3&w=400&h=300&fit=crop",
+      "item_brand": "apple",
+      "item_type": "accessory",
+      "item_quantity": 45
+    },
+    {
+      "item_name": "Dell Wireless Mouse",
+      "item_price": 19.99,
+      "item_description": "Compact wireless mouse with blue LED",
+      "item_image": "https://images.unsplash.com/photo-1630002744431-5b71c5df3b3a?ixlib=rb-4.0.3&w=400&h=300&fit=crop",
+      "item_brand": "dell",
+      "item_type": "accessory",
+      "item_quantity": 60
+    }
+  ]

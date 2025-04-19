@@ -1,0 +1,138 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+<div class="checkout-container">
+    <h1>Checkout</h1>
+    
+    <div class="checkout-grid">
+        <div class="checkout-form">
+            <h2>Shipping Information</h2>
+            <form method="post">
+                {% csrf_token %}
+                
+                <div class="form-group">
+                    {{ form.shipping_address.label_tag }}
+                    {{ form.shipping_address }}
+                </div>
+                
+                <h2>Payment Method</h2>
+                <div class="payment-methods">
+                    {% for choice in form.payment_method %}
+                    <div class="payment-method">
+                        {{ choice.tag }}
+                        <label for="{{ choice.id_for_label }}">
+                            {{ choice.choice_label }}
+                        </label>
+                    </div>
+                    {% endfor %}
+                </div>
+                
+                <button type="submit" class="checkout-button">Place Order</button>
+            </form>
+        </div>
+        
+        <div class="order-summary">
+            <h2>Your Order</h2>
+            <div class="order-items">
+                {% for item in cart_items %}
+                <div class="order-item">
+                    <img src="{{ item.product.item_image }}" alt="{{ item.product.item_name }}">
+                    <div>
+                        <h3>{{ item.product.item_name }}</h3>
+                        <p>{{ item.quantity }} × ${{ item.product.item_price }}</p>
+                    </div>
+                    <span>${{ item.total_price }}</span>
+                </div>
+                {% endfor %}
+            </div>
+            
+            <div class="order-total">
+                <h3>Total: ${{ total_price }}</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.checkout-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.checkout-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.payment-methods {
+    margin: 20px 0;
+}
+
+.payment-method {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.payment-method input {
+    margin-right: 10px;
+}
+
+.checkout-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+.order-summary {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.order-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.order-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin-right: 15px;
+    border-radius: 4px;
+}
+
+.order-item div {
+    flex-grow: 1;
+}
+
+.order-total {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+    text-align: right;
+}
+</style>
+{% endblock %}

@@ -1,0 +1,356 @@
+{% extends 'core/base.html' %} {% load static %} {% block title %}About Us |
+MobileWorldStation{% endblock %} {% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}" />
+{% endblock %} {% block content %}
+<!-- Hero Section -->
+<section class="about-hero">
+  <div class="container">
+    <h1>Our Story</h1>
+    <div class="breadcrumb">
+      <a href="{% url 'core:home' %}">Home</a>
+      <span>/</span>
+      <a href="{% url 'core:about' %}">About Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- About Intro -->
+<section class="about-intro">
+  <div class="container">
+    <div class="intro-content">
+      <div class="intro-text">
+        <h2>Connecting You to the Mobile World</h2>
+        <p>
+          Founded in 2010, MobileWorldStation began as a small kiosk in the
+          local mall with a passion for mobile technology. Today, we've grown
+          into the region's premier destination for mobile devices, accessories,
+          and repair services.
+        </p>
+        <p>
+          Our mission is simple: to provide exceptional value, expert advice,
+          and top-quality products that keep you connected to what matters most.
+        </p>
+        <div class="stats-grid">
+          <div class="stat-item">
+            <span class="stat-number" data-count="13">0</span>
+            <span class="stat-label">Years in Business</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-count="25000">0</span>+
+            <span class="stat-label">Happy Customers</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-count="98">0</span>%
+            <span class="stat-label">Satisfaction Rate</span>
+          </div>
+        </div>
+      </div>
+      <div class="intro-image">
+        <img
+          src="https://media.canva.com/v2/image-resize/format:JPG/height:550/quality:92/uri:ifs%3A%2F%2F%2Fc008597f-bff9-438d-8ff3-5241fdc5aefb/watermark:F/width:550?csig=AAAAAAAAAAAAAAAAAAAAADe_l6hqsf47idnXuE4coXVaZ2H6epPE59dRkkYL-A6w&exp=1744301184&osig=AAAAAAAAAAAAAAAAAAAAAIsFiI55Si1ypyK1x2tPNtZa1G8vMD92W67pED7rwsgk&signer=media-rpc&x-canva-quality=thumbnail_large"
+          alt="Our First Store"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Our Values -->
+<section class="our-values">
+  <div class="container">
+    <h2 class="section-title">Our Core Values</h2>
+    <p class="section-subtitle">What makes us different</p>
+
+    <div class="values-grid">
+      <div class="value-card">
+        <div class="value-icon">
+          <i class="fas fa-shield-alt"></i>
+        </div>
+        <h3>Integrity</h3>
+        <p>
+          We believe in honest advice and transparent pricing. No hidden fees,
+          no pressure tactics - just straightforward service you can trust.
+        </p>
+      </div>
+
+      <div class="value-card">
+        <div class="value-icon">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+        <h3>Expertise</h3>
+        <p>
+          Our team undergoes continuous training to stay ahead of mobile
+          technology trends and provide you with knowledgeable recommendations.
+        </p>
+      </div>
+
+      <div class="value-card">
+        <div class="value-icon">
+          <i class="fas fa-heart"></i>
+        </div>
+        <h3>Passion</h3>
+        <p>
+          We genuinely love what we do, and it shows in every interaction. Your
+          satisfaction is our greatest reward.
+        </p>
+      </div>
+
+      <div class="value-card">
+        <div class="value-icon">
+          <i class="fas fa-handshake"></i>
+        </div>
+        <h3>Community</h3>
+        <p>
+          We're proud to support local schools and organizations, giving back to
+          the community that supports us.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Team Section -->
+<section class="our-team">
+  <div class="container">
+    <h2 class="section-title">Meet Our Team</h2>
+    <p class="section-subtitle">The people behind MobileWorldStation</p>
+
+    <div class="team-grid">
+      <div class="team-member">
+        <div class="member-photo">
+          <img
+            src="{% static 'images/about/team1.jpg' %}"
+            alt="Sarah Johnson"
+          />
+          <div class="member-social-links">
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        <h3>Sarah Johnson</h3>
+        <p class="position">Founder & CEO</p>
+        <p class="bio">
+          With 15 years in the mobile industry, Sarah's vision drives our
+          company forward.
+        </p>
+      </div>
+
+      <div class="team-member">
+        <div class="member-photo">
+          <img src="{% static 'images/about/team2.jpg' %}" alt="Michael Chen" />
+          <div class="member-social-links">
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <h3>Michael Chen</h3>
+        <p class="position">Technical Director</p>
+        <p class="bio">
+          Our repair wizard with certifications in all major mobile device
+          platforms.
+        </p>
+      </div>
+
+      <div class="team-member">
+        <div class="member-photo">
+          <img
+            src="{% static 'images/about/team3.jpg' %}"
+            alt="David Rodriguez"
+          />
+          <div class="member-social-links">
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+          </div>
+        </div>
+        <h3>David Rodriguez</h3>
+        <p class="position">Customer Experience</p>
+        <p class="bio">
+          Ensures every customer leaves with a smile and the perfect mobile
+          solution.
+        </p>
+      </div>
+
+      <div class="team-member">
+        <div class="member-photo">
+          <img src="{% static 'images/about/team4.jpg' %}" alt="Emily Wilson" />
+          <div class="member-social-links">
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        <h3>Emily Wilson</h3>
+        <p class="position">Product Specialist</p>
+        <p class="bio">
+          Knows every spec of every device we carry and helps you find your
+          perfect match.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials">
+  <div class="container">
+    <h2 class="section-title">What Our Customers Say</h2>
+
+    <div class="testimonial-slider">
+      <div class="testimonial active">
+        <div class="quote">
+          <i class="fas fa-quote-left"></i>
+          <p>
+            MobileWorldStation helped me choose the perfect phone for my needs
+            and budget. Their after-sales support is exceptional!
+          </p>
+          <div class="author">
+            <img
+              src="https://i.pinimg.com/474x/eb/76/a4/eb76a46ab920d056b02d203ca95e9a22.jpg"
+              alt="James Peterson"
+            />
+            <div>
+              <h4>James Peterson</h4>
+              <span>Customer since 2015</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial">
+        <div class="quote">
+          <i class="fas fa-quote-left"></i>
+          <p>
+            I dropped my phone and cracked the screen. They had it repaired in
+            under an hour with a warranty on the work. Amazing service!
+          </p>
+          <div class="author">
+            <img
+              src="https://media.canva.com/v2/image-resize/format:JPG/height:550/quality:92/uri:ifs%3A%2F%2F%2F2f32ffc9-6958-4448-b423-7779a238e6f7/watermark:F/width:550?csig=AAAAAAAAAAAAAAAAAAAAAGW1gJ1pOyBoq8q_GXhkRejFgc4x_MQchvWtSQthH9UI&exp=1744301291&osig=AAAAAAAAAAAAAAAAAAAAALrN2-i__zqDVZv6aCYvlWESmcjqLWWIoHBAzPay0nZP&signer=media-rpc&x-canva-quality=thumbnail_large"
+              alt="Lisa Thompson"
+            />
+            <div>
+              <h4>Lisa Thompson</h4>
+              <span>Customer since 2018</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial">
+        <div class="quote">
+          <i class="fas fa-quote-left"></i>
+          <p>
+            The team helped my small business outfit all our employees with
+            secure, reliable devices at a great price point.
+          </p>
+          <div class="author">
+            <img
+              src="{% static 'images/about/customer3.jpg' %}"
+              alt="Robert Chang"
+            />
+            <div>
+              <h4>Robert Chang</h4>
+              <span>Business Customer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slider-controls">
+        <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+        <div class="dots">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+        <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Call to Action -->
+<section class="about-cta">
+  <div class="container">
+    <h2>Ready to Experience the MobileWorldStation Difference?</h2>
+    <div class="cta-buttons">
+      <a href="#" class="btn btn-primary">Contact Us</a>
+      <a href="#" class="btn btn-secondary">Our Services</a>
+    </div>
+  </div>
+</section>
+{% endblock %} {% block extra_js %}
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Animate statistics counting
+    const statNumbers = document.querySelectorAll(".stat-number");
+
+    const animateCount = (element) => {
+      const target = parseInt(element.dataset.count);
+      const duration = 2000; // 2 seconds
+      const step = target / (duration / 16); // 60fps
+
+      let current = 0;
+      const timer = setInterval(() => {
+        current += step;
+        if (current >= target) {
+          clearInterval(timer);
+          element.textContent = target;
+        } else {
+          element.textContent = Math.floor(current);
+        }
+      }, 16);
+    };
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            animateCount(entry.target);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    statNumbers.forEach((stat) => observer.observe(stat));
+
+    // Testimonial slider
+    const testimonials = document.querySelectorAll(".testimonial");
+    const dots = document.querySelectorAll(".dot");
+    let currentIndex = 0;
+
+    function showTestimonial(index) {
+      testimonials.forEach((testimonial) =>
+        testimonial.classList.remove("active")
+      );
+      dots.forEach((dot) => dot.classList.remove("active"));
+
+      testimonials[index].classList.add("active");
+      dots[index].classList.add("active");
+      currentIndex = index;
+    }
+
+    document.querySelector(".next-btn").addEventListener("click", () => {
+      let nextIndex = (currentIndex + 1) % testimonials.length;
+      showTestimonial(nextIndex);
+    });
+
+    document.querySelector(".prev-btn").addEventListener("click", () => {
+      let prevIndex =
+        (currentIndex - 1 + testimonials.length) % testimonials.length;
+      showTestimonial(prevIndex);
+    });
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener("click", () => showTestimonial(index));
+    });
+
+    // Auto-rotate testimonials
+    setInterval(() => {
+      let nextIndex = (currentIndex + 1) % testimonials.length;
+      showTestimonial(nextIndex);
+    }, 5000);
+  });
+</script>
+{% endblock %}
