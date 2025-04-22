@@ -31,7 +31,7 @@
               <p>{{ item.product.get_item_brand_display }}</p>
             </div>
           </td>
-          <td>${{ item.product.item_price }}</td>
+          <td>£{{ item.product.item_price }}</td>
           <td class="quantity-cell">
             <div class="quantity-control">
               <button
@@ -62,7 +62,7 @@
             </div>
           </td>
 
-          <td class="item-total">${{ item.product_price|floatformat:2 }}</td>
+          <td class="item-total">£{{ item.product_price|floatformat:2 }}</td>
           <td>
             <button
               onclick="removeFromCart('{{ item.product.id }}')"
@@ -84,7 +84,7 @@
           >):</span
         >
         <span
-          >$<span id="summary-subtotal"
+          >£<span id="summary-subtotal"
             >{{ total_price|floatformat:2 }}</span
           ></span
         >
@@ -92,7 +92,7 @@
       <div class="summary-row total">
         <span>Total:</span>
         <span
-          >$<span id="summary-total"
+          >£<span id="summary-total"
             >{{ total_price|floatformat:2 }}</span
           ></span
         >
@@ -221,9 +221,9 @@
     function updateRowTotal(productId, quantity) {
       const itemRow = document.getElementById(`cart-item-${productId}`);
       const price = parseFloat(
-        itemRow.querySelector("td:nth-child(2)").textContent.replace("$", "")
+        itemRow.querySelector("td:nth-child(2)").textContent.replace("£", "")
       );
-      itemRow.querySelector(".item-total").textContent = `$${(
+      itemRow.querySelector(".item-total").textContent = `£${(
         price * quantity
       ).toFixed(2)}`;
     }

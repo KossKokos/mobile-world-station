@@ -1,4 +1,19 @@
 /* Products Filter */
+
+.page-header {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://img.freepik.com/premium-photo/futuristic-tech-devices-dark-background_14117-686116.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 120px 20px 60px;
+}
+
+.page-header h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
 .products-filter {
   background: white;
   padding: 20px;

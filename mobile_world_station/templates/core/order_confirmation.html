@@ -13,14 +13,14 @@
         {% for item in order.items.all %}
         <div class="order-item">
           <span>{{ item.quantity }} × {{ item.product.item_name }}</span>
-          <span>${{ item.price }}</span>
+          <span>{{ item.quantity }} × £{{ item.price }}</span>
         </div>
         {% endfor %}
       </div>
 
       <div class="order-total">
         <span>Total:</span>
-        <span>${{ order.total_price }}</span>
+        <span>£{{ order.total_price }}</span>
       </div>
     </div>
 
@@ -29,7 +29,7 @@
       <p>{{ order.shipping_address }}</p>
     </div>
 
-    <a href="{% url 'products' %}" class="continue-shopping"
+    <a href="{% url 'core:products' %}" class="continue-shopping"
       >Continue Shopping</a
     >
   </div>

@@ -39,15 +39,15 @@
                     <img src="{{ item.product.item_image }}" alt="{{ item.product.item_name }}">
                     <div>
                         <h3>{{ item.product.item_name }}</h3>
-                        <p>{{ item.quantity }} × ${{ item.product.item_price }}</p>
+                        <p>{{ item.quantity }} × £{{ item.product.item_price }}</p>
                     </div>
-                    <span>${{ item.total_price }}</span>
+                    <span>£{{ item.product_price }}</span>
                 </div>
                 {% endfor %}
             </div>
             
             <div class="order-total">
-                <h3>Total: ${{ total_price }}</h3>
+                <h3>Total: £{{ total_price }}</h3>
             </div>
         </div>
     </div>

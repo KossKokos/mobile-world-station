@@ -173,7 +173,7 @@ def checkout(request):
     if not cart_items.exists():
         return redirect('core:view_cart')
     
-    total_price = sum(item.total_price for item in cart_items)
+    total_price = sum(item.product_price for item in cart_items)
 
     if request.method == 'POST':
         form = CheckoutForm(request.POST)

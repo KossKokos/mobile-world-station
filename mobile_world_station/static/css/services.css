@@ -12,6 +12,20 @@
   margin-bottom: 15px;
 } */
 
+.page-header {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://otrs.com/wp-content/uploads/it-services-header-image.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 120px 20px 60px;
+}
+
+.page-header h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
 .section-title {
   text-align: center;
   color: var(--secondary-color);
