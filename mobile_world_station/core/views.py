@@ -11,7 +11,7 @@ import json
 from .forms import CheckoutForm
 
 from .models import Item, Cart, Order, OrderItem
-# Create your views here.
+
 
 def signup(request):
     if request.method == 'POST':
@@ -215,14 +215,14 @@ def order_confirmation(request, order_id):
     return render(request, 'core/order_confirmation.html', {'order': order})
 
 
-def get_accessories(request):
-    return render(request=request, template_name='core/accessories.html')
+# def get_accessories(request):
+#     return render(request=request, template_name='core/accessories.html')
 
 def get_services(request):
     return render(request=request, template_name='core/services.html')
 
-def get_deals(request):
-    return render(request=request, template_name='core/deals.html')
+# def get_deals(request):
+#     return render(request=request, template_name='core/deals.html')
 
 def get_about(request):
     return render(request=request, template_name='core/about.html')

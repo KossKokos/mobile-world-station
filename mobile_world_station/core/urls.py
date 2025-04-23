@@ -6,7 +6,6 @@ app_name = 'core'
 
 urlpatterns = [
     path('signup/', views.signup, name='signup'),
-    # path('logout/', views.signup, name='logout'),
     path('', views.get_home, name='home'),
 
     path('products/', views.get_products, name='products'),
@@ -20,9 +19,9 @@ urlpatterns = [
     path('checkout/', views.checkout, name='checkout'),  # You'll need to implement this
     path('order-confirmation/<int:order_id>/', views.order_confirmation, name='order_confirmation'),
 
-    path('accessories/', views.get_accessories, name='accessories'),
+    # path('accessories/', views.get_accessories, name='accessories'),
     path('services/', views.get_services, name='services'),
-    path('deals/', views.get_deals, name='deals'),
+    # path('deals/', views.get_deals, name='deals'),
     path('about/', views.get_about, name='about'),
     path('contact/', views.get_contact, name='contact'),
 ]
