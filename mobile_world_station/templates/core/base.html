@@ -24,7 +24,7 @@
     <!-- Header with Navigation -->
     <header>
       <div class="container header-container">
-        <a href="index.html" class="logo">Mobile<span>WorldStation</span></a>
+        <a href="{% url 'core:home' %}" class="logo">Mobile<span>WorldStation</span></a>
         <button class="mobile-menu-btn" id="mobileMenuBtn">
           <i class="fas fa-bars"></i>
         </button>
@@ -41,9 +41,7 @@
             </li>
             <li><a href="{% url 'core:home' %}">Home</a></li>
             <li><a href="{% url 'core:products' %}">Products</a></li>
-            <!-- <li><a href="{% url 'core:accessories' %}">Accessories</a></li> -->
             <li><a href="{% url 'core:services' %}">Services</a></li>
-            <!-- <li><a href="{% url 'core:deals' %}">Deals</a></li> -->
             <li><a href="{% url 'core:about' %}">About Us</a></li>
             <li><a href="{% url 'core:contact' %}">Contact</a></li>
             <li><a href="forum.html">Forum</a></li>
@@ -92,11 +90,11 @@
           <div class="footer-column">
             <h3>Quick Links</h3>
             <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="products.html">Products</a></li>
-              <li><a href="services.html">Services</a></li>
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="contact.html">Contact</a></li>
+              <li><a href="{% url 'core:home' %}">Home</a></li>
+              <li><a href="{% url 'core:products' %}">Products</a></li>
+              <li><a href="{% url 'core:services' %}">Services</a></li>
+              <li><a href="{% url 'core:about' %}">About Us</a></li>
+              <li><a href="{% url 'core:contact' %}">Contact</a></li>
             </ul>
           </div>
 
@@ -135,6 +133,26 @@
       </div>
     </footer>
     <script src="{% static 'js/base.js' %}">
+    </script>
+    <script>
+    function handleLogout(event) {
+      event.preventDefault();
+      if (confirm("Are you sure you want to logout?")) {
+        // Create a hidden form and submit it
+        const form = document.createElement("form");
+        form.method = "POST";
+        form.action = '{% url "logout" %}';
+      
+        const csrf = document.createElement("input");
+        csrf.type = "hidden";
+        csrf.name = "csrfmiddlewaretoken";
+        csrf.value = "{{ csrf_token }}";
+      
+        form.appendChild(csrf);
+        document.body.appendChild(form);
+        form.submit();
+      }
+      }
     </script>
     {% block extra_js %}{% endblock %}
     <script
