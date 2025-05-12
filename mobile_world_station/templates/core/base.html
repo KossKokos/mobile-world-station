@@ -24,7 +24,9 @@
     <!-- Header with Navigation -->
     <header>
       <div class="container header-container">
-        <a href="{% url 'core:home' %}" class="logo">Mobile<span>WorldStation</span></a>
+        <a href="{% url 'core:home' %}" class="logo"
+          >Mobile<span>WorldStation</span></a
+        >
         <button class="mobile-menu-btn" id="mobileMenuBtn">
           <i class="fas fa-bars"></i>
         </button>
@@ -44,7 +46,7 @@
             <li><a href="{% url 'core:services' %}">Services</a></li>
             <li><a href="{% url 'core:about' %}">About Us</a></li>
             <li><a href="{% url 'core:contact' %}">Contact</a></li>
-            <li><a href="forum.html">Forum</a></li>
+            <!-- <li><a href="forum.html">Forum</a></li> -->
             {% if user.is_authenticated %}
             <li>
               <a href="#" onclick="handleLogout(event)" class="navbar-right"
@@ -102,11 +104,12 @@
           <div class="footer-column">
             <h3>Customer Service</h3>
             <ul>
-              <li><a href="#">FAQ</a></li>
-              <li><a href="#">Shipping & Returns</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Terms & Conditions</a></li>
-              <li><a href="forum.html">Community Forum</a></li>
+              <li><a href="{% url 'core:faq' %}">FAQ</a></li>
+              <li>
+                <a href="{% url 'core:shipping' %}">Shipping & Returns</a>
+              </li>
+              <li><a href="{% url 'core:privacy' %}">Privacy Policy</a></li>
+              <li><a href="{% url 'core:terms' %}">Terms & Conditions</a></li>
             </ul>
           </div>
 
@@ -115,10 +118,9 @@
             <h3>Contact Us</h3>
             <ul>
               <li>
-                <i class="fas fa-map-marker-alt"></i> 123 Mobile Street, Tech
-                City
+                <i class="fas fa-map-marker-alt"></i> Belmore St, London SW8 2JY
               </li>
-              <li><i class="fas fa-phone"></i> (123) 456-7890</li>
+              <li><i class="fas fa-phone"></i> 020-750-150-00</li>
               <li>
                 <i class="fas fa-envelope"></i> info@mobileworldstation.com
               </li>
@@ -128,30 +130,29 @@
         </div>
 
         <div class="copyright">
-          <p>&copy; 2023 MobileWorldStation. All Rights Reserved.</p>
+          <p>&copy; 2025 MobileWorldStation. All Rights Reserved.</p>
         </div>
       </div>
     </footer>
-    <script src="{% static 'js/base.js' %}">
-    </script>
+    <script src="{% static 'js/base.js' %}"></script>
     <script>
-    function handleLogout(event) {
-      event.preventDefault();
-      if (confirm("Are you sure you want to logout?")) {
-        // Create a hidden form and submit it
-        const form = document.createElement("form");
-        form.method = "POST";
-        form.action = '{% url "logout" %}';
-      
-        const csrf = document.createElement("input");
-        csrf.type = "hidden";
-        csrf.name = "csrfmiddlewaretoken";
-        csrf.value = "{{ csrf_token }}";
-      
-        form.appendChild(csrf);
-        document.body.appendChild(form);
-        form.submit();
-      }
+      function handleLogout(event) {
+        event.preventDefault();
+        if (confirm("Are you sure you want to logout?")) {
+          // Create a hidden form and submit it
+          const form = document.createElement("form");
+          form.method = "POST";
+          form.action = '{% url "logout" %}';
+
+          const csrf = document.createElement("input");
+          csrf.type = "hidden";
+          csrf.name = "csrfmiddlewaretoken";
+          csrf.value = "{{ csrf_token }}";
+
+          form.appendChild(csrf);
+          document.body.appendChild(form);
+          form.submit();
+        }
       }
     </script>
     {% block extra_js %}{% endblock %}

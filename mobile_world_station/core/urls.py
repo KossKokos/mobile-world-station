@@ -24,4 +24,9 @@ urlpatterns = [
     # path('deals/', views.get_deals, name='deals'),
     path('about/', views.get_about, name='about'),
     path('contact/', views.get_contact, name='contact'),
+
+    path('faq/', views.get_faq, name='faq'),
+    path('shipping/', views.get_shipping, name='shipping'),
+    path('privacy/', views.get_privacy, name='privacy'),
+    path('terms/', views.get_terms, name='terms'),
 ]

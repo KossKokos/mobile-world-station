@@ -229,3 +229,15 @@ def get_about(request):
 
 def get_contact(request):
     return render(request=request, template_name='core/contact.html')
+
+def get_faq(request):
+    return render(request=request, template_name='core/faq.html')
+
+def get_shipping(request):
+    return render(request=request, template_name='core/shipping_returns.html')
+
+def get_privacy(request):
+    return render(request=request, template_name='core/privacy_policy.html')
+
+def get_terms(request):
+    return render(request=request, template_name='core/terms_conditions.html')

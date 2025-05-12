@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs - MobileWorldStation</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 20px; }
+        h1 { color: #333; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+        .faq-item { margin-bottom: 20px; border: 1px solid #eee; padding: 15px; border-radius: 5px; }
+        .question { font-weight: bold; margin-bottom: 10px; cursor: pointer; }
+        .answer { display: none; padding-top: 10px; }
+        .answer.show { display: block; }
+    </style>
+</head>
+<body>
+    <h1>Frequently Asked Questions</h1>
+    
+    <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">What payment methods do you accept?</div>
+        <div class="answer">We accept Visa, Mastercard, PayPal, and bank transfers.</div>
+    </div>
+    
+    <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">How long does shipping take?</div>
+        <div class="answer">Standard shipping takes 3-5 business days. Express options are available.</div>
+    </div>
+    
+    <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">Can I return my purchase?</div>
+        <div class="answer">Yes, we offer 30-day returns on unused items with original packaging.</div>
+    </div>
+    
+    <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">Do you offer international shipping?</div>
+        <div class="answer">Currently we only ship within the country.</div>
+    </div>
+
+    <script>
+        function toggleAnswer(question) {
+            const answer = question.nextElementSibling;
+            answer.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>

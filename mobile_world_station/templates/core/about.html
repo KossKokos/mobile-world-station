@@ -46,10 +46,14 @@ MobileWorldStation{% endblock %} {% block extra_css %}
         </div>
       </div>
       <div class="intro-image">
-        <img
-          src="https://providencecomputers.com/wp-content/uploads/2019/07/20170826_170422_resized.jpg"
-          alt="Our First Store"
-        />
+        <video
+          class="intro-video"
+          autoplay
+          loop
+          playsinline
+          muted
+          src="https://res.cloudinary.com/dtg29idor/video/upload/v1747046148/store_video_fifpxt.mp4"
+        ></video>
       </div>
     </div>
   </div>
@@ -119,7 +123,7 @@ MobileWorldStation{% endblock %} {% block extra_css %}
       <div class="team-member">
         <div class="member-photo">
           <img
-            src="{% static 'images/about/team1.jpg' %}"
+            src="https://res.cloudinary.com/dtg29idor/image/upload/v1747047612/ceo_about_us_img_rmbemq.jpg"
             alt="Sarah Johnson"
           />
           <div class="member-social-links">
@@ -137,7 +141,10 @@ MobileWorldStation{% endblock %} {% block extra_css %}
 
       <div class="team-member">
         <div class="member-photo">
-          <img src="{% static 'images/about/team2.jpg' %}" alt="Michael Chen" />
+          <img
+            src="https://res.cloudinary.com/dtg29idor/image/upload/v1747047612/technical_director_about_us_img_zyebey.jpg"
+            alt="Michael Chen"
+          />
           <div class="member-social-links">
             <a href="#"><i class="fab fa-linkedin"></i></a>
             <a href="#"><i class="fab fa-instagram"></i></a>
@@ -154,7 +161,7 @@ MobileWorldStation{% endblock %} {% block extra_css %}
       <div class="team-member">
         <div class="member-photo">
           <img
-            src="{% static 'images/about/team3.jpg' %}"
+            src="https://res.cloudinary.com/dtg29idor/image/upload/v1747047612/customer_experience_about_us_img_zm1mdq.jpg"
             alt="David Rodriguez"
           />
           <div class="member-social-links">
@@ -172,7 +179,10 @@ MobileWorldStation{% endblock %} {% block extra_css %}
 
       <div class="team-member">
         <div class="member-photo">
-          <img src="{% static 'images/about/team4.jpg' %}" alt="Emily Wilson" />
+          <img
+            src="https://res.cloudinary.com/dtg29idor/image/upload/v1747047612/product_specialist_about_us_img_bgo2iz.jpg"
+            alt="Emily Wilson"
+          />
           <div class="member-social-links">
             <a href="#"><i class="fab fa-linkedin"></i></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
@@ -224,7 +234,7 @@ MobileWorldStation{% endblock %} {% block extra_css %}
           </p>
           <div class="author">
             <img
-              src="https://media.canva.com/v2/image-resize/format:JPG/height:550/quality:92/uri:ifs%3A%2F%2F%2F2f32ffc9-6958-4448-b423-7779a238e6f7/watermark:F/width:550?csig=AAAAAAAAAAAAAAAAAAAAAGW1gJ1pOyBoq8q_GXhkRejFgc4x_MQchvWtSQthH9UI&exp=1744301291&osig=AAAAAAAAAAAAAAAAAAAAALrN2-i__zqDVZv6aCYvlWESmcjqLWWIoHBAzPay0nZP&signer=media-rpc&x-canva-quality=thumbnail_large"
+              src="https://res.cloudinary.com/dtg29idor/image/upload/v1747048601/Lisa_Thompson_customer_img_fjydg1.jpg"
               alt="Lisa Thompson"
             />
             <div>
@@ -244,7 +254,7 @@ MobileWorldStation{% endblock %} {% block extra_css %}
           </p>
           <div class="author">
             <img
-              src="{% static 'images/about/customer3.jpg' %}"
+              src="https://res.cloudinary.com/dtg29idor/image/upload/v1747048601/Robert__Chang_customer_img_djgkkp.jpg"
               alt="Robert Chang"
             />
             <div>
@@ -273,12 +283,13 @@ MobileWorldStation{% endblock %} {% block extra_css %}
   <div class="container">
     <h2>Ready to Experience the MobileWorldStation Difference?</h2>
     <div class="cta-buttons">
-      <a href="#" class="btn btn-primary">Contact Us</a>
-      <a href="#" class="btn btn-secondary">Our Services</a>
+      <a href="{% url 'core:contact' %}" class="btn btn-primary">Contact Us</a>
+      <a href="{% url 'core:services' %}" class="btn btn-secondary"
+        >Our Services</a
+      >
     </div>
   </div>
 </section>
 {% endblock %} {% block extra_js %}
-<script src="{% static 'js/about.js' %}">
-</script>
+<script src="{% static 'js/about.js' %}"></script>
 {% endblock %}
