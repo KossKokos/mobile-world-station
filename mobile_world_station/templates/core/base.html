@@ -33,14 +33,7 @@
         <nav id="mainNav">
           <ul>
             <!-- <a href="#" class="navbar-right">Welcome, {{ user.username }}</a> -->
-            <li>
-              <a href="{% url 'core:view_cart' %}" class="cart-link">
-                Cart {% if request.user.is_authenticated %}<span
-                  class="cart-count"
-                  >({{ request.user.cart_set.count }})</span
-                >{% endif %}
-              </a>
-            </li>
+
             <li><a href="{% url 'core:home' %}">Home</a></li>
             <li><a href="{% url 'core:products' %}">Products</a></li>
             <li><a href="{% url 'core:services' %}">Services</a></li>
@@ -61,6 +54,14 @@
               <a href="{% url 'core:signup' %}" class="navbar-right">Sign Up</a>
             </li>
             {% endif %}
+            <li>
+              <a href="{% url 'core:view_cart' %}" class="cart-link">
+                🛒Cart {% if request.user.is_authenticated %}<span
+                  class="cart-count"
+                  >({{ request.user.cart_set.count }})</span
+                >{% endif %}
+              </a>
+            </li>
           </ul>
         </nav>
       </div>

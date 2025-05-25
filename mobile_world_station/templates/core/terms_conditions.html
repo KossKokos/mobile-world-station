@@ -1,64 +1,59 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Terms & Conditions - MobileWorldStation</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 20px;
-      }
-      h1,
-      h2 {
-        color: #333;
-      }
-      h1 {
-        border-bottom: 1px solid #eee;
-        padding-bottom: 10px;
-      }
-      .section {
-        margin-bottom: 25px;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>Terms & Conditions</h1>
-    <p>Last updated: 12 May 2025</p>
+{% extends 'core/base.html' %} {% load static %} {% block title %} Terms &
+Conditions - MobileWorldStation {% endblock %} {%block content %}
+<style>
+  .main-container {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .title,
+  .heading {
+    color: #333;
+  }
+  h1 {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+  }
+  .section {
+    margin-bottom: 25px;
+  }
+</style>
+<div class="main-container">
+  <h1 class="title">Terms & Conditions</h1>
+  <p>Last updated: 12 May 2025</p>
 
-    <div class="section">
-      <h2>General Terms</h2>
-      <p>
-        By using our website and making purchases, you agree to these terms. We
-        reserve the right to update these terms at any time.
-      </p>
-    </div>
+  <div class="section">
+    <h2 class="heading">General Terms</h2>
+    <p>
+      By using our website and making purchases, you agree to these terms. We
+      reserve the right to update these terms at any time.
+    </p>
+  </div>
 
-    <div class="section">
-      <h2>Product Information</h2>
-      <p>
-        We make every effort to display product colors and specifications
-        accurately, but slight variations may occur.
-      </p>
-    </div>
+  <div class="section">
+    <h2 class="heading">Product Information</h2>
+    <p>
+      We make every effort to display product colors and specifications
+      accurately, but slight variations may occur.
+    </p>
+  </div>
 
-    <div class="section">
-      <h2>Pricing & Payments</h2>
-      <p>
-        All prices are in [currency]. We accept major credit cards and PayPal.
-        Your payment is processed securely.
-      </p>
-    </div>
+  <div class="section">
+    <h2 class="heading">Pricing & Payments</h2>
+    <p>
+      All prices are in £. We accept major credit cards and PayPal. Your payment
+      is processed securely.
+    </p>
+  </div>
 
-    <div class="section">
-      <h2>Limitation of Liability</h2>
-      <p>
-        MobileWorldStation is not liable for any indirect damages arising from
-        product use. Our liability is limited to the purchase price.
-      </p>
-    </div>
-  </body>
-</html>
+  <div class="section">
+    <h2 class="heading">Limitation of Liability</h2>
+    <p>
+      MobileWorldStation is not liable for any indirect damages arising from
+      product use. Our liability is limited to the purchase price.
+    </p>
+  </div>
+</div>
+{% endblock %}

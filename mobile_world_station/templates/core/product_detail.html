@@ -27,10 +27,18 @@
 
     <div class="product-actions">
       {% if request.user.is_authenticated %}
+      <audio id="add-to-cart-audio" preload="auto">
+        <source
+          src="https://res.cloudinary.com/dtg29idor/video/upload/v1747118120/add_to_cart_sound_igrrk1.mp3"
+          type="audio/mpeg"
+        />
+        Your browser does not support the audio element.
+      </audio>
       <button
         id="add-to-cart-btn"
         class="add-to-cart-btn {% if in_cart %}in-cart{% endif %}"
         data-product-id="{{ product.id }}"
+        onclick="playAudio()"
       >
         {% if in_cart %}✓ In Cart{% else %}Add to Cart{% endif %}
       </button>
@@ -81,5 +89,9 @@
           console.error("Error:", error);
         });
     });
+  function playAudio() {
+    const audio = document.getElementById("add-to-cart-audio");
+    audio.play();
+  }
 </script>
 {% endblock %} {% endblock %}
